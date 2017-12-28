@@ -24,13 +24,13 @@
     "purescript-console": "^3.0.0",
     "purescript-prelude": "^3.1.0",
     "purescript-either": "^3.1.0",
-    "purescript-argonaut-core": "^3.1.0",
     "purescript-globals": "^3.0.0",
     "purescript-foldable-traversable": "^3.6.1",
     "purescript-nullable": "^3.0.0",
     "purescript-dom": "^4.9.0",
     "purescript-affjax": "^5.0.0",
-    "purescript-argonaut-generic-codecs": "^6.0.4"
+    "purescript-generics-rep": "^5.4.0",
+    "purescript-foreign-generic": "^5.0.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^3.0.0"
