@@ -30,7 +30,7 @@
     "purescript-dom": "^4.9.0",
     "purescript-affjax": "^5.0.0",
     "purescript-generics-rep": "^5.4.0",
-    "purescript-foreign-generic": "^5.0.0"
+    "purescript-argonaut-generic": "^1.2.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^3.0.0"
