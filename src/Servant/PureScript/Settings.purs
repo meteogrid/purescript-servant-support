@@ -8,6 +8,7 @@ module Servant.PureScript.Settings where
 import Prelude
 import Control.Monad.Except (runExcept)
 import Data.Bifunctor (lmap)
+import Data.Foreign.Class ()
 import Data.Foreign (Foreign, typeOf)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Class (class GenericDecode, class GenericEncode)
