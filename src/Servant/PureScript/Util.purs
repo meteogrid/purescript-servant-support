@@ -21,7 +21,7 @@ import Servant.PureScript.Settings (SPSettings_(SPSettings_), SPSettingsToUrlPie
 -- | Reports an error if status code is non success or decoding fails. The taken AjaxRequest is only for error reporting.
 getResult
   :: forall a m rep
-   . Generic rep a
+   . Generic a rep
   => GenericDecode rep
   => MonadError AjaxError m
   => AjaxRequest
