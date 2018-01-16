@@ -30,7 +30,7 @@
     "purescript-dom": "^4.9.0",
     "purescript-affjax": "^5.0.0",
     "purescript-generics-rep": "^5.4.0",
-    "purescript-foreign-generic": "^5.0.0"
+    "purescript-foreign-generic": "meteogrid/purescript-foreign-generic#525ecb747144a0fd117592c79042dab419398203"
   },
   "devDependencies": {
     "purescript-psci-support": "^3.0.0"
