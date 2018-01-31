@@ -9,6 +9,16 @@
 
 // module Servant.PureScript.Affjax
 
+function getXSRFToken() {
+  var cookies = document.cookies.split(';');
+  for (var i=0; i<cookies.length; i++) {
+    var cookie = cookies[i].split('=');
+    if (cookies[0]=='XSRF-TOKEN') {
+      return cookies[1];
+    }
+  }
+}
+
 // jshint maxparams: 5
 exports._ajax = function (mkHeader, options, canceler, errback, callback) {
   var platformSpecific = { };
@@ -51,6 +61,10 @@ exports._ajax = function (mkHeader, options, canceler, errback, callback) {
     xhr.open(options.method || "GET", fixedUrl, true, options.username, options.password);
     if (options.headers) {
       try {
+        var token = getXSRFToken();
+        if (token) {
+          xhr.setRequestHeader("X-XSRF-TOKEN", token);
+        }
         for (var i = 0, header; (header = options.headers[i]) != null; i++) {
           xhr.setRequestHeader(header.field, header.value);
         }
