@@ -10,11 +10,13 @@
 // module Servant.PureScript.Affjax
 
 function getXSRFToken() {
-  var cookies = document.cookies.split(';');
-  for (var i=0; i<cookies.length; i++) {
-    var cookie = cookies[i].split('=');
-    if (cookies[0]=='XSRF-TOKEN') {
-      return cookies[1];
+  if (document.cookie) {
+    var cookies = document.cookie.split(';');
+    for (var i=0; i<cookies.length; i++) {
+      var cookie = cookies[i].split('=');
+      if (cookies[0]=='XSRF-TOKEN') {
+        return cookies[1];
+      }
     }
   }
 }
