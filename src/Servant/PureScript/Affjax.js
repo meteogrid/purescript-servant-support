@@ -12,10 +12,11 @@
 function getXSRFToken() {
   if (document.cookie) {
     var cookies = document.cookie.split(';');
+    var cookieName = 'XSRF-TOKEN';
     for (var i=0; i<cookies.length; i++) {
-      var cookie = cookies[i].split('=');
-      if (cookies[0]=='XSRF-TOKEN') {
-        return cookies[1];
+      var cookie = cookies[i];
+      if (cookie.slice(0, cookieName.length) == cookieName) {
+        return cookie.slice(cookieName.length + 1);
       }
     }
   }
