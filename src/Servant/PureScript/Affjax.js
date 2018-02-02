@@ -14,7 +14,7 @@ function getXSRFToken() {
     var cookies = document.cookie.split(';');
     var cookieName = 'XSRF-TOKEN';
     for (var i=0; i<cookies.length; i++) {
-      var cookie = cookies[i];
+      var cookie = cookies[i].trim();
       if (cookie.slice(0, cookieName.length) == cookieName) {
         return cookie.slice(cookieName.length + 1);
       }
